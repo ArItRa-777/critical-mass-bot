@@ -1,1 +1,86 @@
+## 🧠 Bot Strategy — Chain Reaction AI
+
+This bot is designed to play **Chain Reaction** using a fast, aggressive, and adaptive decision-making strategy while respecting the competition time constraint of under **1 second per move**.
+
+---
+
+### Core Algorithm
+
+The bot uses the **Minimax algorithm** with **Alpha-Beta pruning** to simulate future game states and select the optimal move.
+
+* **Minimax** allows the bot to evaluate possible future moves by assuming both players play optimally.
+* **Alpha-Beta pruning** improves efficiency by eliminating branches that cannot influence the final decision.
+* **Iterative Deepening** ensures the bot always returns the best possible move within the time limit.
+
+This combination allows deeper strategic thinking while maintaining fast response time.
+
+---
+
+### Aggressive Playstyle
+
+The bot prioritizes moves that:
+
+* Trigger explosions
+* Capture opponent cells
+* Create chain reactions
+* Expand territory quickly
+* Apply constant pressure on the opponent
+
+This aggressive behavior increases the chance of gaining board control and winning through cascading reactions.
+
+---
+
+### Explosion Handling
+
+The bot uses a **queue-based chain reaction system** to resolve explosions efficiently.
+
+Key optimizations:
+
+* Prevents duplicate processing of the same cell
+* Ensures stable and fast chain resolution
+* Avoids infinite loops using safety limits
+
+This makes the simulation reliable and computationally efficient.
+
+---
+
+### Evaluation Strategy
+
+The bot evaluates board positions using:
+
+* **Orb advantage** — more orbs increases score
+* **Cell stability** — cells close to exploding are valuable
+* **Board control** — more owned cells improves position
+* **Opponent pressure** — attacking unstable enemy cells is prioritized
+
+The goal is to maximize control while minimizing opponent strength.
+
+---
+
+### Performance Optimizations
+
+To meet strict competition timing requirements, the bot includes:
+
+* 1D board representation (faster processing)
+* Move ordering (better pruning efficiency)
+* Alpha-Beta pruning
+* Iterative deepening search
+* Optimized explosion resolution
+* Time-safe decision making (< 1 second)
+
+These optimizations allow the bot to search deeper game states quickly and reliably.
+
+---
+
+### Summary
+
+This bot is:
+
+* Strategic
+* Aggressive
+* Time-efficient
+* Adaptive
+* Competition-ready
+
+It balances speed and intelligence to perform reliably under real-time constraints.
 
